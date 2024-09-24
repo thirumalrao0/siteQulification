@@ -1,0 +1,54 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	xmlns:smartForm="sap.ui.comp.smartform"
+	xmlns:smartField="sap.ui.comp.smartfield"
+>
+	<Dialog>
+		<smartForm:SmartForm editable="true">
+			<smartForm:Group>
+				<smartForm:GroupElement>
+					<smartField:SmartField
+						editable="false"
+						value="{StudyId}"
+					/>
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField
+						editable="false"
+						value="{SiteCode}"
+					/>
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{ChecklistID}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{ItemDescription}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{CompletionStatus}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{CompletionDate}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{ResponsiblePerson}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{Comments}" />
+				</smartForm:GroupElement>
+			</smartForm:Group>
+		</smartForm:SmartForm>
+		<Toolbar>
+			<Button
+			type="Emphasized"
+				press="save"
+				text="Submit"
+			/>
+			<Button
+				press="cancelAll"
+				text="Cancel"
+			/>
+		</Toolbar>
+	</Dialog>
+</c:FragmentDefinition>

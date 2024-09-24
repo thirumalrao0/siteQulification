@@ -1,0 +1,36 @@
+<c:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+>
+    <smarttable:SmartTable
+    id="EDid"
+        editable="{edit>/isEditable}"
+        tableBindingPath="to_EssentialDocuments"
+        app:useSmartField="true"
+        initiallyVisibleFields="Studyid,Sitecode,DocumentID,DocumentName,DocumentType,CollectedDate,Status,ExpiryDate,Notes"
+        entitySet="EssentialDocumentation"
+        enableAutoBinding="true"
+    >
+        <smarttable:customToolbar>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button
+                    press="addAll"
+                    icon="sap-icon://add"
+                />
+                <Button
+                    enabled="false"
+                    press="onDelete"
+                    icon="sap-icon://delete"
+                />
+            </Toolbar>
+        </smarttable:customToolbar>
+        <Table
+            mode="MultiSelect"
+            selectionChange="onTableSelectionChange"
+        />
+    </smarttable:SmartTable>
+</c:FragmentDefinition>

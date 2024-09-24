@@ -1,0 +1,181 @@
+<mvc:View
+    controllerName="rbx.week5.109.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:m="sap.m"
+    xmlns="sap.uxap"
+    xmlns:core="sap.ui.core"
+>
+    <ObjectPageLayout showFooter="{edit>/isEditable}">
+        <footer>
+            <m:OverflowToolbar>
+                <m:ToolbarSpacer />
+                <m:Button
+                    press="submit"
+                    type="Accept"
+                    text="Save"
+                />
+                <m:Button
+                    press="discard"
+                    type="Accept"
+                    text="Discard"
+                />
+                <m:Button
+                    press="cancelBack"
+                    text="Cancel"
+                />
+            </m:OverflowToolbar>
+        </footer>
+        <headerTitle>
+            <ObjectPageDynamicHeaderTitle>
+                <heading>
+                    <m:Title text="{Studyid}" />
+                </heading>
+                <actions>
+                    <m:Button
+                        text="Edit"
+                        type="Emphasized"
+                        press="editAll"
+                        visible="{= !${edit>/isEditable} }"
+                    />
+                    <m:Button
+                        type="Transparent"
+                        text="Delete"
+                        visible="{= !${edit>/isEditable} }"
+                    />
+                </actions>
+            </ObjectPageDynamicHeaderTitle>
+        </headerTitle>
+        <headerContent>
+            <m:Title text="{SiteCodeDescription}" />
+        </headerContent>
+        <sections>
+            <ObjectPageSection
+                titleUppercase="false"
+                title="Site Qulification  Selection"
+            >
+                <subSections>
+                    <ObjectPageSubSection
+                        title="Site Qulification"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="rbx.week5.109.fragments.siteQ"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                titleUppercase="false"
+                title="Reqular Document Collection "
+            >
+                <subSections>
+                    <ObjectPageSubSection
+                        title="Reqular Document Collection"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="rbx.week5.109.fragments.rdc"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                titleUppercase="false"
+                title="TrainingManagment "
+            >
+                <subSections>
+                    <ObjectPageSubSection
+                        title="TrainingManagment"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="rbx.week5.109.fragments.trainingm"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                titleUppercase="false"
+                title="Site Initail Visit "
+            >
+                <subSections>
+                    <ObjectPageSubSection
+                        title="Site Initail Visit"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="rbx.week5.109.fragments.siVisit"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                titleUppercase="false"
+                title="Activation checkList "
+            >
+                <subSections>
+                    <ObjectPageSubSection
+                        title="Activation checkList"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="rbx.week5.109.fragments.activChecklist"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                titleUppercase="false"
+                title="Site Contract and Budget Approvel "
+            >
+                <subSections>
+                    <ObjectPageSubSection
+                        title="Site Contract and Budget Approvel"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="rbx.week5.109.fragments.SCBA"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection
+                titleUppercase="false"
+                title="Essential Documents "
+            >
+                <subSections>
+                    <ObjectPageSubSection
+                        title="Essential Documents"
+                        titleUppercase="false"
+                    >
+                        <blocks>
+                            <core:Fragment
+                                fragmentName="rbx.week5.109.fragments.ED"
+                                type="XML"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+    </ObjectPageLayout>
+</mvc:View>

@@ -1,0 +1,57 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	xmlns:smartForm="sap.ui.comp.smartform"
+	xmlns:smartField="sap.ui.comp.smartfield"
+>
+	<Dialog>
+		<smartForm:SmartForm editable="true">
+			<smartForm:Group>
+				<smartForm:GroupElement>
+					<smartField:SmartField
+						editable="false"
+						value="{Studyid}"
+					/>
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField
+						editable="false"
+						value="{sicod}"
+					/>
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{VisitDate}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{Monitorname}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{MonitorID}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{AgendaItemsCovered}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{SitePersonnelPresent}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{TrainingConducted}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{SiteReadinessStatus}" />
+				</smartForm:GroupElement>
+			</smartForm:Group>
+		</smartForm:SmartForm>
+		<Toolbar>
+			<Button
+			type="Emphasized"
+				press="save"
+				text="Submit"
+			/>
+			<Button
+				press="cancelAll"
+				text="Cancel"
+			/>
+		</Toolbar>
+	</Dialog>
+</c:FragmentDefinition>

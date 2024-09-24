@@ -1,0 +1,53 @@
+<mvc:View
+   xmlns:table="sap.ui.table"
+   controllerName="rbx.week5.109.controller.View1"
+   xmlns:mvc="sap.ui.core.mvc"
+   displayBlock="true"
+   xmlns="sap.m"
+   xmlns:smarttable="sap.ui.comp.smarttable"
+   xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+>
+   <Page>
+  
+      <smartFilterBar:SmartFilterBar
+         id="smartFilterBar"
+         entitySet="SiteQualification"
+         persistencyKey="SmartFilter_Explored"
+         basicSearchFieldName="Studyid"
+         enableBasicSearch="true"
+      />
+       <VBox class="sapUiResponsiveMargin" >
+      <smarttable:SmartTable 
+         smartFilterId="smartFilterBar"
+         id="smartTable"
+         initiallyVisibleFields="Studyid,SiteCode,SiteCodeDescription,AssessmentScores,QualificationNotes,QualificationStatus,QualificationDate"
+         entitySet="SiteQualification"
+         enableAutoBinding="true"
+      >
+         <smarttable:customToolbar>
+            <Toolbar>
+               <ToolbarSpacer />
+               <Button
+                  press="addDialog"
+                  icon="sap-icon://add"
+               />
+               <Button
+                  enabled="false"
+                  press="onDelete"
+                  icon="sap-icon://delete"
+               />
+            </Toolbar>
+         </smarttable:customToolbar>
+         <Table
+            mode="MultiSelect"
+            selectionChange="onTableSelectionChange"
+         >
+            <ColumnListItem
+               type="Active"
+               press="nextPage"
+            />
+         </Table>
+      </smarttable:SmartTable>
+      </VBox>
+   </Page>
+</mvc:View>

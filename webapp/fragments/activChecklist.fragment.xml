@@ -1,0 +1,35 @@
+<c:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+>
+    <smarttable:SmartTable
+        id="actCheckId"
+        editable="{edit>/isEditable}"
+        entitySet="ActivationCheck"
+        tableBindingPath="to_ActivationChecklist"
+        app:useSmartField="true"
+        initiallyVisibleFields="StudyId,SiteCode,ChecklistID,ItemDescription,CompletionStatus,CompletionDate,ResponsiblePerson,Comments"
+        enableAutoBinding="true"
+    >
+        <smarttable:customToolbar>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button
+                    press="addAll"
+                    icon="sap-icon://add"
+                />
+                <Button
+                    enabled="false"
+                    press="onDelete"
+                    icon="sap-icon://delete"
+                />
+            </Toolbar>
+        </smarttable:customToolbar>
+        <Table
+            mode="MultiSelect"
+            selectionChange="onTableSelectionChange"
+        />
+    </smarttable:SmartTable>
+</c:FragmentDefinition>

@@ -1,0 +1,45 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	xmlns:smartForm="sap.ui.comp.smartform"
+	xmlns:smartField="sap.ui.comp.smartfield"
+>
+	<Dialog>
+		<smartForm:SmartForm editable="true">
+			<smartForm:Group>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{Studyid}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{SiteCode}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{SiteCodeDescription}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{AssessmentScores}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{QualificationNotes}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{QualificationStatus}" />
+				</smartForm:GroupElement>
+				<smartForm:GroupElement>
+					<smartField:SmartField value="{QualificationDate}" />
+				</smartForm:GroupElement>
+			</smartForm:Group>
+		</smartForm:SmartForm>
+		<Toolbar>
+			<Button
+			type="Emphasized"
+				press="onAdd"
+				text="Submit"
+			/>
+			<Button
+				press="cancel"
+				text="Cancel"
+			/>
+		</Toolbar>
+	</Dialog>
+</c:FragmentDefinition>
